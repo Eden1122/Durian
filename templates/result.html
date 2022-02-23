@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% block title2%} Result {% endblock%}
+</br>
+{% block content%}
+	{% if prediction == 0%}
+	<h2 class="display-messages">Type: 101</h2>
+	{% elif prediction == 1%}
+	<h2 class="display-messages">Type : D13</h2>
+	{% elif prediction == 2%}
+	<h2 class="display-messages">Type : KH</h2>
+	{% elif prediction == 3%}
+	<h2 class="display-messages">Type : D24</h2>
+	{% elif prediction == 4%}
+	<h2 class="display-messages">Type : D88</h2>
+	{% elif prediction == 5%}
+	<h2 class="display-messages">Type : D2</h2>
+	{% elif prediction == 6%}
+	<h2 class="display-messages">Type : Black Thorn</h2>
+	{% elif prediction == 7%}
+	<h2 class="display-messages">Type : Golden Pheonix</h2>
+	{% elif prediction == 8%}
+	<h2 class="display-messages">Type : Musang King</h2>
+	{% elif prediction == 9%}
+	<h2 class="display-messages">Type : Kucing_tidur</h2>
+	
+	{% endif %}
+{% endblock%}
