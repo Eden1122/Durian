@@ -2,7 +2,6 @@ import numpy as np
 import sys
 import os
 import flask
-import keras
 from flask import Flask, render_template, request, flash, send_from_directory
 from keras.models import model_from_json
 import secrets
