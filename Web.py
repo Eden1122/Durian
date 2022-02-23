@@ -35,11 +35,7 @@ model1.compile(loss='categorical_crossentropy',
 
 
 # routes
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='bg.jpg')
-                               
+
 @app.route("/", methods=['GET', 'POST'])
 def main():
     return render_template("index.html")
