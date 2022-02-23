@@ -28,7 +28,7 @@ dict1 = {0: '101', 1: 'D13', 2: 'KH', 3: 'D24', 4: 'D88', 5: 'D2', 6: 'Black_tho
 
 model1 = model_from_json(open('model2.json').read())
 model1.load_weights('model2.h5')
-model1.compile(loss='binary_crossentropy',
+model1.compile(loss='categorical_crossentropy',
                optimizer='adam', metrics=['accuracy'])
 
 
