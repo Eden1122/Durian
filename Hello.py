@@ -1,6 +1,4 @@
 import numpy as np
-import cv2
-from matplotlib.pyplot import imread
 import sys
 import os
 import flask
@@ -56,6 +54,8 @@ def get_output():
 
         import matplotlib.image as image
         import matplotlib.pyplot as plt
+        import cv2
+        from matplotlib.pyplot import imread
 
         data = []
         img = plt.imread(x.filename)
