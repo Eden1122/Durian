@@ -5,6 +5,7 @@ from matplotlib.pyplot import imread
 import sys
 import os
 import flask
+from tensorflow.python import tf2
 from flask import Flask, render_template, request, flash, send_from_directory
 from keras.models import load_model
 from keras.models import model_from_json
