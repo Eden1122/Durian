@@ -1,3 +1,4 @@
+from time import process_time_ns
 import numpy as np
 from keras.preprocessing import image
 import cv2
@@ -80,5 +81,5 @@ def get_output():
 if __name__ == '__main__':
     #port = int(os.environ.get('PORT', 5000))
     # run the app locally on the givn port
-    app.run()
+    app.run(debug = True)
     
