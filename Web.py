@@ -5,7 +5,7 @@ from matplotlib.pyplot import imread
 import sys
 import os
 import flask
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, send_from_directory
 from keras.models import load_model
 from keras.models import model_from_json
 import secrets
@@ -34,6 +34,11 @@ model1.compile(loss='categorical_crossentropy',
 
 
 # routes
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='bg.jpg')
+                               
 @app.route("/", methods=['GET', 'POST'])
 def main():
     return render_template("index.html")
