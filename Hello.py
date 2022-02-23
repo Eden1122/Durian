@@ -1,6 +1,4 @@
 import numpy as np
-import keras_preprocessing
-from keras.preprocessing import image
 import cv2
 from matplotlib.pyplot import imread
 import sys
@@ -10,8 +8,6 @@ from flask import Flask, render_template, request, flash, send_from_directory
 from keras.models import load_model
 from keras.models import model_from_json
 import secrets
-import glob
-import matplotlib.pyplot as plt
 
 
 secret = secrets.token_urlsafe(32)
@@ -58,7 +54,6 @@ def get_output():
         path = os.path.join(app.config['UPLOAD_FOLDER'], x.filename)
         x.save(path)
 
-        import matplotlib.cbook as cbook
         import matplotlib.image as image
         import matplotlib.pyplot as plt
 
