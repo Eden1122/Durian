@@ -80,5 +80,5 @@ def get_output():
 if __name__ == '__main__':
     #port = int(os.environ.get('PORT', 5000))
     # run the app locally on the givn port
-    app.run(debug=True)
+    app.run()
     
